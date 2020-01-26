@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "SourceSansPro Black";
+    font-display: block;
+    src: url("../fonts/SourceSansPro-Black.ttf") format("truetype"),
+    local("Arial");
+}
+
+@font-face {
+    font-family: "SourceSansPro Bold";
+    font-display: block;
+    src: url("../fonts/SourceSansPro-Bold.ttf") format("truetype"),
+    local("Arial Medium");
+}
+
+@font-face {
+    font-family: "SourceSansPro-Regular";
+    font-display: block;
+    src: url("../fonts/SourceSansPro-Regular.ttf") format("truetype"),
+    local("Arial");
+}
+
+@font-face {
+    font-family: "SourceSansPro SemiBold";
+    font-style: normal;
+    font-display: block;
+    src: local("Open Sans Regular"),
+    url("../fonts/SourceSansPro-SemiBold.ttf") format("truetype"),
+    local("Arial");
+}
