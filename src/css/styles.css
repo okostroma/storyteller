@@ -1,6 +1,7 @@
 @import "settings.css" all;
 @import "fonts.css" all;
 @import "reset.css" all;
+/*
 
 .wr-preview{
     background-image: url("../images/section1/header.png"), url("../images/section1/background.jpg") ;
@@ -156,7 +157,7 @@ header .social a {
     width: 621px;
     margin-top: 23px;
     object-fit: contain;
-    /*на мобильных устройствах картинка картинка уезжает*/
+    !*на мобильных устройствах картинка картинка уезжает*!
     position: relative;
 }
 
@@ -481,3 +482,4 @@ footer .icons{
     margin-top: auto;
 }
 
+*/
