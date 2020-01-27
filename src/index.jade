@@ -3,11 +3,32 @@ html(lang="en")
         meta(charset='UTF-8')
         meta(name='viewport', content='width=device-width, initial-scale=1')
         title Storyteller
+        //favicon
         link(href='./css/styles.css', rel='stylesheet', type='text/css')
         link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
 body
-    section
+    section.wr-header
         div.container
-            div.content
-                h1 "HELLO WORLD!!!"
-                h2 "Storyteller"
+            header
+                a.logo(href='#') unicorn
+                nav
+                    ul.nav-menu
+                        li.active
+                            a(href='#') home
+                        li
+                            a(href='#') about
+                        li
+                            a(href='#') stories
+                        li
+                            a(href='#') hello
+                    button(class="fa fa-bars")
+            section.header-content
+                h1 STORYTELLER
+                div.line
+                p One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.
+                button read the rest
+    section.wr-intro
+        div.container
+            img(src="../images/2-intro/broccoli.png" alt="broccoli-icon")
+            h2 Who & Why
+            p The gentlemen who rented the room would sometimes take their evening meal at home in the living room that was used by everyone, and so the door to this room was often kept closed in the evening. But Gregor found it easy to give up having the door open, he had, after all, often failed to make use of it when it was open and, without the family having noticed it, lain in his room in its darkest corner. One time, though, the charwoman left the door.

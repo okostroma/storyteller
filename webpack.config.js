@@ -16,12 +16,16 @@ module.exports = {
     mode        : 'production',//'production', //'development',//
     entry       : [
         './src/index.jade',
-        './src/sass/styles.sass'
+        './src/scss/styles.scss',
+        // './src/images/**',
+        // './src/fonts/**',
     ],
     output      : {
         // path: './dist',
         // filename: 'bundle-[name].[ext]',
         // filename: 'index.html',
+        publicPath: '/',
+        // path: __dirname + "/dist",
         path: path.resolve(__dirname, 'dist'),
     },
     optimization: {
@@ -86,36 +90,40 @@ module.exports = {
                             }
                         }
                     },
-                    'sass-loader'
+                    'resolve-url-loader',
+                    'sass-loader',
+                    // 'resolve-url'
                 ],
             },
             {
-                test   : /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
-                loader : 'url-loader',
+                test   : /\.(png|jpe?g|gif|svg|)$/i,
+                loader : 'file-loader',
+                // loader : 'url-loader',
                 options: {
-                    limit: 8192,
+                    name : '[folder]/[name].[ext]',
+                    // limit: 8192,
+                    outputPath: 'images',
                 },
             },
             {
-                test  : /\.(ttf|otf|webp)$/i,
-                loader: 'file-loader',
-
+                test   : /\.(ttf|otf|webp)$/i, //eot|ttf|woff|woff2
+                loader : 'file-loader',
                 options: {
                     name      : '[name].[ext]',
                     outputPath: 'fonts',
                 },
             },
-            {
-                test: /\.png$/,
-                use : [
-                    {
-                        loader : 'url-loader',
-                        options: {
-                            mimetype: 'image/png'
-                        }
-                    }
-                ]
-            }
+            // {
+            //     test: /\.(png|jpg)$/,
+            //     use : [
+            //         {
+            //             loader : 'url-loader',
+            //             options: {
+            //                 mimetype: 'image/png'
+            //             }
+            //         }
+            //     ]
+            // }
         ]
     },
     plugins     : [
