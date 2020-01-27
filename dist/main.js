@@ -77,7 +77,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
@@ -103,7 +103,7 @@ var buf = [];
 var jade_mixins = {};
 var jade_interp;
 
-buf.push("<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><title>Storyteller</title><!--favicon--><link href=\"./css/styles.css\" rel=\"stylesheet\" type=\"text/css\"><link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\"></head></html><body><section class=\"wr-header\"><div class=\"container\"><div class=\"content\"><a href=\"#\" class=\"logo\">unicorn</a><nav><ul class=\"nav-menu\"><li class=\"active\"><a href=\"#\">home</a></li><li class=\"active\"><a href=\"#\">about</a></li><li class=\"active\"><a href=\"#\">stories</a></li><li class=\"active\"><a href=\"#\">hello</a></li></ul></nav></div></div></section></body>");;return buf.join("");
+buf.push("<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><title>Storyteller</title><!--favicon--><link href=\"./css/styles.css\" rel=\"stylesheet\" type=\"text/css\"><link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\"></head></html><body><section class=\"wr-header\"><div class=\"container\"><header><a href=\"#\" class=\"logo\">unicorn</a><nav><ul class=\"nav-menu\"><li class=\"active\"><a href=\"#\">home</a></li><li><a href=\"#\">about</a></li><li><a href=\"#\">stories</a></li><li><a href=\"#\">hello</a></li></ul><button class=\"fa fa-bars\"></button></nav></header><section class=\"header-content\"><h1>STORYTELLER</h1><div class=\"line\"></div><p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p><button>read the rest</button></section></div></section><section class=\"wr-intro\"><div class=\"container\"><img src=\"../images/2-intro/broccoli.png\" alt=\"broccoli-icon\"><h2>Who & Why</h2><p>The gentlemen who rented the room would sometimes take their evening meal at home in the living room that was used by everyone, and so the door to this room was often kept closed in the evening. But Gregor found it easy to give up having the door open, he had, after all, often failed to make use of it when it was open and, without the family having noticed it, lain in his room in its darkest corner. One time, though, the charwoman left the door.</p></div></section></body>");;return buf.join("");
 }
 
 /***/ }),
