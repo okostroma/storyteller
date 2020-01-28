@@ -1,3 +1,9 @@
+mixin services-article(image, caption, text)
+    article
+        img(src=image.url alt=image.alt)
+        h3= caption
+        p= text
+doctype html
 html(lang="en")
     head
         meta(charset='UTF-8')
@@ -29,6 +35,23 @@ body
                 button read the rest
     section.wr-intro
         div.container
-            img(src="../images/2-intro/broccoli.png" alt="broccoli-icon")
+            img(src="./images/2-intro/broccoli.png" alt="broccoli-icon")
             h2 Who & Why
             p The gentlemen who rented the room would sometimes take their evening meal at home in the living room that was used by everyone, and so the door to this room was often kept closed in the evening. But Gregor found it easy to give up having the door open, he had, after all, often failed to make use of it when it was open and, without the family having noticed it, lain in his room in its darkest corner. One time, though, the charwoman left the door.
+    section.wr-services
+        div.container
+            +services-article(
+            {url: "./images/3-services/clock.png", alt: "clock-icon"},
+            "An Wow Feature",
+            "The gentlemen who rented the room would sometimes take their evening meal at home in the living."
+            )
+            +services-article(
+            {url: "./images/3-services/vector.png", alt: "vector-icon"},
+            "An Wow Feature",
+            "The gentlemen who rented the room would sometimes take their evening meal at home in the living."
+            )
+            +services-article(
+            {url: "./images/3-services/landworking.png", alt: "landworking-icon"},
+            "An Wow Feature",
+            "The gentlemen who rented the room would sometimes take their evening meal at home in the living."
+            )

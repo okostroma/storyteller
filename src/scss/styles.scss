@@ -122,3 +122,29 @@ header {
     line-height: 1.8em;
   }
 }
+.wr-services{
+  background-color: #efefef;
+  padding: 68px 0 113px;
+  .container{
+    display: flex;
+    justify-content: space-around;
+  }
+  article{
+    max-width: 380px;
+    padding: 0 50px 0 60px;
+    img{
+      display: block;
+      margin-bottom: 30px;
+    }
+    h3{
+      font-family: "SourceSansPro-SemiBold";
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+    p{
+      font-family: "SourceSansPro-Regular";
+      font-size: 16px;
+      line-height: 1.8em;
+    }
+  }
+}

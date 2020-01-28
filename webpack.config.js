@@ -6,10 +6,6 @@ const TerserPlugin = require('terser-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var HtmlMinifierPlugin = require('html-minifier-terser');
-
-const cssExtractor = new ExtractTextPlugin("css", "[name].[id].css");
-const htmlExtractor = new ExtractTextPlugin("html", "[name].html");
 
 module.exports = {
     watch       : false,
@@ -17,42 +13,14 @@ module.exports = {
     entry       : [
         './src/index.jade',
         './src/scss/styles.scss',
-        // './src/images/**',
-        // './src/fonts/**',
     ],
     output      : {
-        // path: './dist',
-        // filename: 'bundle-[name].[ext]',
-        // filename: 'index.html',
-        publicPath: '/',
-        // path: __dirname + "/dist",
-        path: path.resolve(__dirname, 'dist'),
+        publicPath: './',
+        path      : path.resolve(__dirname, 'dist'),
     },
     optimization: {
         minimizer: [
-            // new TerserPlugin({
-            //     terserOptions: {
-            //         ecma    : 5,
-            //         mangle  : {
-            //             properties: {
-            //                 builtins: true,
-            //                 regex   : /\.return/
-            //             },
-            //         },
-            //         compress: {
-            //             global_defs: {
-            //                 "@alert" : "console.log",
-            //                 ".return": "['return']",
-            //             },
-            //
-            //             properties    : false,
-            //             computed_props: false,
-            //         },
-            //         output  : {
-            //             keep_quoted_props: true
-            //         }
-            //     },
-            // }),
+            new TerserPlugin(),
         ]
     },
     module      : {
@@ -62,11 +30,13 @@ module.exports = {
                 loader: 'html-loader'
             },
             {
-                test   : /\.jade$/,
-                loader : 'jade-loader',
-                options: {
-                    name: '[name].jade',
-                },
+                test: /\.jade$/,
+                use : [
+                    'html-loader',
+                    // 'raw-loader',
+                    'pug-html-loader'
+                ],
+
             },
             {
                 test: /\.css$/,
@@ -80,8 +50,18 @@ module.exports = {
                 test: /\.(sa|sc|c)ss$/,
                 use : [
                     'style-loader',
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '../'
+                        }
+                    },
+                    {
+                        loader : 'css-loader',
+                        options: {
+                            modules: false
+                        }
+                    },
                     {
                         loader : 'postcss-loader',
                         options: {
@@ -90,40 +70,34 @@ module.exports = {
                             }
                         }
                     },
-                    'resolve-url-loader',
+                    // 'resolve-url-loader',
                     'sass-loader',
                     // 'resolve-url'
                 ],
             },
             {
-                test   : /\.(png|jpe?g|gif|svg|)$/i,
-                loader : 'file-loader',
-                // loader : 'url-loader',
-                options: {
-                    name : '[folder]/[name].[ext]',
-                    // limit: 8192,
-                    outputPath: 'images',
-                },
+                test: /\.(png|jpe?g|gif|svg|)$/i,
+                use : [
+                    {
+                        loader : 'file-loader',
+                        options: {
+                            name      : '[folder]/[name].[ext]',
+                            outputPath: 'images',
+                            esModule  : false,
+                            useRelativePath: true,
+
+                        },
+                    }
+                ]
             },
             {
-                test   : /\.(ttf|otf|webp)$/i, //eot|ttf|woff|woff2
+                test   : /\.(ttf|otf|webp|eot|woff|woff2)$/i, //
                 loader : 'file-loader',
                 options: {
                     name      : '[name].[ext]',
                     outputPath: 'fonts',
                 },
             },
-            // {
-            //     test: /\.(png|jpg)$/,
-            //     use : [
-            //         {
-            //             loader : 'url-loader',
-            //             options: {
-            //                 mimetype: 'image/png'
-            //             }
-            //         }
-            //     ]
-            // }
         ]
     },
     plugins     : [
@@ -133,10 +107,9 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            title   : 'My App',
             template: './src/index.jade',
             minify  : true,
-            injec   : 'body'
+            // injec   : 'body'
         }),
         autoprefixer
     ],
