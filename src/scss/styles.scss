@@ -1,7 +1,12 @@
 @import "./settings.scss";
 @import "./fonts.scss";
 @import "./reset.scss";
+@import "../js/slick/slick.css";
+@import "../js/slick/slick-theme.css";
 
+.text{
+  font-size: 28px;
+}
 
 .wr-header {
   background-image: url("../images/1-header/background.jpg");
@@ -130,8 +135,7 @@ header {
     justify-content: space-around;
   }
   article{
-    max-width: 380px;
-    padding: 0 50px 0 60px;
+    max-width: 272px;
     img{
       display: block;
       margin-bottom: 30px;
@@ -146,5 +150,14 @@ header {
       font-size: 16px;
       line-height: 1.8em;
     }
+  }
+}
+.wr-featured{
+  .slide{
+    display: inline-block;
+    width: 370px;
+    height: 370px;
+    background-color: #00DFFC;
+    border: 1px solid red;
   }
 }
