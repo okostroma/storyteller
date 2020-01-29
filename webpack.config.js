@@ -9,12 +9,14 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     watch       : false,
-    mode        : 'production',//'production', //'development',//
+    mode        : 'development',//'production', //'development',//
     entry       : [
         './src/index.jade',
         './src/scss/styles.scss',
+        './src/js/main.js',
     ],
     output      : {
+        filename: 'js/main.js',
         publicPath: './',
         path      : path.resolve(__dirname, 'dist'),
     },
@@ -23,8 +25,19 @@ module.exports = {
             new TerserPlugin(),
         ]
     },
+    devtool:'inline-source-map',
     module      : {
         rules: [
+            {
+                test  : /\.js$/,
+                include: path.resolve(__dirname, 'src/js'),
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
+            },
             {
                 test  : /\.html$/,
                 loader: 'html-loader'
@@ -40,6 +53,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
+                // exclude: /slick/,
                 use : [
                     'style-loader',
                     MiniCssExtractPlugin.loader,
@@ -75,6 +89,7 @@ module.exports = {
                     // 'resolve-url'
                 ],
             },
+
             {
                 test: /\.(png|jpe?g|gif|svg|)$/i,
                 use : [
@@ -114,6 +129,9 @@ module.exports = {
         autoprefixer
     ],
     devServer   : {
+        // contentBase: [path.join(__dirname, 'dist'), path.join(__dirname, 'src')]
         contentBase: './dist',
+        watchContentBase: true,
+        port: 9001
     },
 };
