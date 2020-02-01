@@ -140,7 +140,7 @@ header {
       display: block;
       margin-bottom: 30px;
     }
-    h3{
+    h2{
       font-family: "SourceSansPro-SemiBold";
       font-size: 18px;
       margin-bottom: 40px;
@@ -153,11 +153,120 @@ header {
   }
 }
 .wr-featured{
-  .slide{
+  padding: 108px 0 142px;
+  .container{
+    //height: 500px;
+    text-align: center;
+  }
+  h2{
+    font-family: "SourceSansPro-Bold";
+    font-size: 27px;
+    margin-bottom: 50px;
+  }
+  .container > p {
+    max-width: 770px;
+    margin: auto;
+    margin-bottom: 108px;
+    font-family: "SourceSansPro-Regular";
+    font-size: 16px;
+    line-height: 2em;
+  }
+  .slick-next{
+    right: -50px;
+  }
+  .slick-prev{
+    left: -100px;
+  }
+  .article{
     display: inline-block;
-    width: 370px;
-    height: 370px;
-    background-color: #00DFFC;
-    border: 1px solid red;
+    position: relative;
+    max-width: 370px;
+    width: 100%;
+    padding: 70px 40px 52px;
+    margin: 0 15px;
+    text-align: left;
+    background-color: #222222;
+    color: #eeeeee;
+    h3{
+      font-family: "SourceSansPro-Regular";
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 35px;
+    }
+    & > p{
+      min-height: 140px;
+      font-family: "SourceSansPro-Regular";
+      font-size: 24px;
+    }
+  }
+  .article:hover::before{
+    content: '';
+    display: block;
+    width: 75px;
+    height: 7px;
+    position: absolute;
+    top: 0;
+    left:50%;
+    transform: translate(-50%, 0);
+    background-color: #e64a19;
+    z-index: 10;
+    //border-top: 7px solid
+  }
+  .author{
+    display: flex;
+    width: 100%;
+    .author-content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    p{
+      display: inline-block;
+
+      vertical-align: baseline;
+      font-family: "SourceSansPro-SemiBold";
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+    & p:first-child{
+      margin-bottom: 8px;
+    }
+    img{
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
   }
 }
+.wr-clients{
+  background-color: #efefef;
+  padding: 68px 0 110px;
+  .container{
+    max-width: 970px;
+    text-align: center;
+  }
+  .clients-slider{
+    vertical-align: center;
+  }
+  .slick-track{
+    display: flex;
+    align-items: center;
+  }
+  .slick-next{
+    right: -50px;
+  }
+  .slick-prev{
+    left: -100px;
+  }
+  img{
+    height: auto;
+    max-width: 98px;
+    margin: 0 36px;
+  }
+  h2{
+    font-family: "SourceSansPro-Bold";
+    font-size: 27px;
+    margin-bottom: 65px;
+  }
+}
+

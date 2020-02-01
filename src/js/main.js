@@ -4,8 +4,14 @@
 import $ from './jquery.min.js';
 import './slick/slick.min.js';
 
-$('.myslider').slick({
-    infinite      : true,
-    slidesToShow  : 3,
-    slidesToScroll: 3
+$('.articles-slider').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1
+});
+
+$('.clients-slider').slick({
+    infinite: true,
+    slidesToShow: 6,
+    slidesToScroll: 1
 });

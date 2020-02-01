@@ -1,3 +1,4 @@
+var WebpackDevServer = require("webpack-dev-server");
 const path = require('path');
 const webpack = require('webpack');
 const sass = require('sass');
@@ -25,7 +26,7 @@ module.exports = {
             new TerserPlugin(),
         ]
     },
-    devtool:'inline-source-map',
+    // devtool:'inline-source-map',
     module      : {
         rules: [
             {

@@ -1,4 +1,4 @@
-@charset 'UTF-8';
+/*@charset 'UTF-8';*/
 /* Slider */
 .slick-loading .slick-list
 {
@@ -88,7 +88,16 @@
 }
 .slick-prev:before
 {
-    content: '←';
+    /*content: '←';*/
+    content: '';
+    display: block;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 70px;
+    height: 70px;
+    background-image: url("../../images/4-featured-articles/arrow-prev.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 [dir='rtl'] .slick-prev:before
 {
@@ -106,7 +115,16 @@
 }
 .slick-next:before
 {
-    content: '→';
+    /*content: '→';*/
+    content: '';
+    display: block;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 70px;
+    height: 70px;
+    background-image: url("../../images/4-featured-articles/arrow-next.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 [dir='rtl'] .slick-next:before
 {
