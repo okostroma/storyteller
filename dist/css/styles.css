@@ -341,55 +341,6 @@
     color: black;
 }
 
-ul {
-  list-style-type: upper-alpha; }
-
-a {
-  text-decoration: none; }
-
-button {
-  cursor: pointer;
-  padding: 0;
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit; }
-
-body {
-  margin: 0; }
-
-.container {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
-  box-sizing: border-box;
-  color: #212121; }
-
-@font-face {
-  font-family: "SourceSansPro-Black";
-  font-display: block;
-  src: url(../fonts/SourceSansPro-Black.ttf) format("truetype"), local("Arial"); }
-
-@font-face {
-  font-family: "SourceSansPro-Bold";
-  font-display: block;
-  src: url(../fonts/SourceSansPro-Bold.ttf) format("truetype"), local("Arial Medium"); }
-
-@font-face {
-  font-family: "SourceSansPro-Regular";
-  font-display: block;
-  src: url(../fonts/SourceSansPro-Regular.ttf) format("truetype"), local("Arial"); }
-
-@font-face {
-  font-family: "SourceSansPro-SemiBold";
-  font-style: normal;
-  font-display: block;
-  src: local("Open Sans Regular"), url(../fonts/SourceSansPro-SemiBold.ttf) format("truetype"), local("Arial"); }
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -712,8 +663,64 @@ textarea {
   color: #000;
   padding: 0.2em 0; }
 
-.text {
-  font-size: 28px; }
+ul {
+  list-style-type: none; }
+
+a {
+  text-decoration: none; }
+
+button {
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit; }
+
+body {
+  margin: 0; }
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #212121; }
+
+h2 {
+  font-family: "SourceSansPro-Bold";
+  font-size: 27px; }
+
+section {
+  font-family: "SourceSansPro-Regular";
+  font-size: 16px;
+  line-height: 33px; }
+
+@font-face {
+  font-family: "SourceSansPro-Black";
+  font-display: block;
+  src: url(../fonts/SourceSansPro-Black.ttf) format("truetype"), local("Arial"); }
+
+@font-face {
+  font-family: "SourceSansPro-Bold";
+  font-display: block;
+  src: url(../fonts/SourceSansPro-Bold.ttf) format("truetype"), local("Arial Medium"); }
+
+@font-face {
+  font-family: "SourceSansPro-Regular";
+  font-display: block;
+  src: url(../fonts/SourceSansPro-Regular.ttf) format("truetype"), local("Arial"); }
+
+@font-face {
+  font-family: "SourceSansPro-SemiBold";
+  font-style: normal;
+  font-display: block;
+  src: local("Open Sans Regular"), url(../fonts/SourceSansPro-SemiBold.ttf) format("truetype"), local("Arial"); }
 
 .wr-header {
   background-image: url(../images/1-header/background.jpg);
@@ -783,7 +790,8 @@ header {
     margin-bottom: 44px; }
   .header-content p {
     font-family: "SourceSansPro-Regular";
-    line-height: 1.5em;
+    font-size: 18px;
+    line-height: 34px;
     margin-bottom: 60px; }
   .header-content button {
     width: 272px;
@@ -796,19 +804,12 @@ header {
   padding: 48px 0 118px;
   background-color: #ffffff; }
   .wr-intro .container {
-    max-width: 970px;
-    text-align: center; }
+    max-width: 970px; }
+  .wr-intro h2 {
+    margin-bottom: 79px; }
   .wr-intro img {
     display: block;
     margin: 0 auto 22px; }
-  .wr-intro h2 {
-    font-family: "SourceSansPro-Bold";
-    font-size: 27px;
-    margin-bottom: 79px; }
-  .wr-intro p {
-    font-family: "SourceSansPro-Regular";
-    font-size: 16px;
-    line-height: 1.8em; }
 
 .wr-services {
   background-color: #efefef;
@@ -816,35 +817,23 @@ header {
   .wr-services .container {
     display: flex;
     justify-content: space-around; }
+  .wr-services h2 {
+    margin-bottom: 40px; }
   .wr-services article {
-    max-width: 272px; }
+    max-width: 272px;
+    text-align: left; }
     .wr-services article img {
       display: block;
       margin-bottom: 30px; }
-    .wr-services article h2 {
-      font-family: "SourceSansPro-SemiBold";
-      font-size: 18px;
-      margin-bottom: 40px; }
-    .wr-services article p {
-      font-family: "SourceSansPro-Regular";
-      font-size: 16px;
-      line-height: 1.8em; }
 
 .wr-featured {
   padding: 108px 0 142px; }
-  .wr-featured .container {
-    text-align: center; }
   .wr-featured h2 {
-    font-family: "SourceSansPro-Bold";
-    font-size: 27px;
     margin-bottom: 50px; }
   .wr-featured .container > p {
     max-width: 770px;
     margin: auto;
-    margin-bottom: 108px;
-    font-family: "SourceSansPro-Regular";
-    font-size: 16px;
-    line-height: 2em; }
+    margin-bottom: 108px; }
   .wr-featured .slick-next {
     right: -50px; }
   .wr-featured .slick-prev {
@@ -903,8 +892,13 @@ header {
   background-color: #efefef;
   padding: 68px 0 110px; }
   .wr-clients .container {
-    max-width: 970px;
-    text-align: center; }
+    max-width: 970px; }
+  .wr-clients h2 {
+    margin-bottom: 65px; }
+  .wr-clients img {
+    height: auto;
+    max-width: 98px;
+    margin: 0 36px; }
   .wr-clients .clients-slider {
     vertical-align: center; }
   .wr-clients .slick-track {
@@ -914,12 +908,63 @@ header {
     right: -50px; }
   .wr-clients .slick-prev {
     left: -100px; }
-  .wr-clients img {
-    height: auto;
-    max-width: 98px;
-    margin: 0 36px; }
-  .wr-clients h2 {
-    font-family: "SourceSansPro-Bold";
-    font-size: 27px;
-    margin-bottom: 65px; }
+
+.wr-portfolio {
+  padding: 111px 0 80px; }
+  .wr-portfolio h2 {
+    margin-bottom: 50px; }
+  .wr-portfolio p {
+    max-width: 770px;
+    margin: 0 auto 57px; }
+  .wr-portfolio .devider {
+    width: 75px;
+    height: 7px;
+    margin: 0 auto;
+    background-color: #e64a19;
+    margin-bottom: 52px; }
+  .wr-portfolio .portfolio-sections {
+    max-width: 400px;
+    margin: 0 auto 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+  .wr-portfolio .portfolio-slider img {
+    width: 440px;
+    height: 360px; }
+  .wr-portfolio .slick-prev, .wr-portfolio .slick-next, .wr-portfolio .slick-next:before, .wr-portfolio .slick-prev:before {
+    display: none; }
+  .wr-portfolio .slick-dots {
+    bottom: -66px; }
+  .wr-portfolio .slick-dots li button {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #cccccc; }
+  .wr-portfolio .slick-dots li button:before {
+    content: "";
+    display: block;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%; }
+  .wr-portfolio .slick-active button:before {
+    background-color: red; }
+
+.wr-quote {
+  background-color: #212121;
+  padding: 82px 0 70px; }
+  .wr-quote .container {
+    max-width: 870px;
+    color: #ffffff; }
+  .wr-quote p:nth-of-type(1) {
+    margin-bottom: 27px; }
+  .wr-quote p:nth-of-type(2) {
+    font-family: "SourceSansPro-Regular";
+    font-size: 20px;
+    line-height: 38px;
+    margin-bottom: 45px; }
+  .wr-quote p:nth-of-type(3) {
+    font-family: "SourceSansPro-Regular";
+    font-size: 20px;
+    line-height: 38px;
+    font-style: oblique; }
 

@@ -1,12 +1,8 @@
+@import "./reset.scss";
 @import "./settings.scss";
 @import "./fonts.scss";
-@import "./reset.scss";
 @import "../js/slick/slick.css";
 @import "../js/slick/slick-theme.css";
-
-.text{
-  font-size: 28px;
-}
 
 .wr-header {
   background-image: url("../images/1-header/background.jpg");
@@ -93,8 +89,8 @@ header {
   }
   p{
     font-family: "SourceSansPro-Regular";
-
-    line-height: 1.5em;
+    font-size: 18px;
+    line-height: 34px;
     margin-bottom: 60px;
   }
   button{
@@ -110,21 +106,13 @@ header {
   background-color: #ffffff;
   .container{
     max-width: 970px;
-    text-align: center;
+  }
+  h2{
+    margin-bottom: 79px;
   }
   img{
     display: block;
     margin: 0 auto 22px;
-  }
-  h2{
-    font-family: "SourceSansPro-Bold";
-    font-size: 27px;
-    margin-bottom: 79px;
-  }
-  p{
-    font-family: "SourceSansPro-Regular";
-    font-size: 16px;
-    line-height: 1.8em;
   }
 }
 .wr-services{
@@ -134,42 +122,27 @@ header {
     display: flex;
     justify-content: space-around;
   }
+  h2{
+    margin-bottom: 40px;
+  }
   article{
     max-width: 272px;
+    text-align: left;
     img{
       display: block;
       margin-bottom: 30px;
-    }
-    h2{
-      font-family: "SourceSansPro-SemiBold";
-      font-size: 18px;
-      margin-bottom: 40px;
-    }
-    p{
-      font-family: "SourceSansPro-Regular";
-      font-size: 16px;
-      line-height: 1.8em;
     }
   }
 }
 .wr-featured{
   padding: 108px 0 142px;
-  .container{
-    //height: 500px;
-    text-align: center;
-  }
   h2{
-    font-family: "SourceSansPro-Bold";
-    font-size: 27px;
     margin-bottom: 50px;
   }
   .container > p {
     max-width: 770px;
     margin: auto;
     margin-bottom: 108px;
-    font-family: "SourceSansPro-Regular";
-    font-size: 16px;
-    line-height: 2em;
   }
   .slick-next{
     right: -50px;
@@ -208,7 +181,7 @@ header {
     top: 0;
     left:50%;
     transform: translate(-50%, 0);
-    background-color: #e64a19;
+    background-color: $devider;
     z-index: 10;
     //border-top: 7px solid
   }
@@ -243,7 +216,14 @@ header {
   padding: 68px 0 110px;
   .container{
     max-width: 970px;
-    text-align: center;
+  }
+  h2{
+    margin-bottom: 65px;
+  }
+  img{
+    height: auto;
+    max-width: 98px;
+    margin: 0 36px;
   }
   .clients-slider{
     vertical-align: center;
@@ -258,15 +238,77 @@ header {
   .slick-prev{
     left: -100px;
   }
-  img{
-    height: auto;
-    max-width: 98px;
-    margin: 0 36px;
-  }
+}
+.wr-portfolio{
+  padding: 111px 0 80px;
   h2{
-    font-family: "SourceSansPro-Bold";
-    font-size: 27px;
-    margin-bottom: 65px;
+    margin-bottom: 50px;
+  }
+  p{
+    max-width: 770px;
+    margin: 0 auto 57px;
+  }
+  .devider{
+    width: 75px;
+    height: 7px;
+    margin: 0 auto;
+    background-color: $devider;
+    margin-bottom: 52px;
+  }
+  .portfolio-sections{
+    max-width: 400px;
+    margin: 0 auto 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .portfolio-slider img{
+    width: 440px;
+    height: 360px;
+  }
+  .slick-prev, .slick-next, .slick-next:before, .slick-prev:before{
+    display: none;
+  }
+  .slick-dots{
+    bottom: -66px;
+  }
+  .slick-dots li button{
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #cccccc;
+  }
+  .slick-dots li button:before{
+    content: "";
+    display: block;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+  }
+  .slick-active button:before{
+    background-color: red;
   }
 }
-
+.wr-quote{
+  background-color: #212121;
+  padding: 82px 0 70px;
+  .container{
+    max-width: 870px;
+    color: #ffffff;
+  }
+  p:nth-of-type(1){
+    margin-bottom: 27px;
+  }
+  p:nth-of-type(2){
+    font-family: "SourceSansPro-Regular";
+    font-size: 20px;
+    line-height: 38px;
+    margin-bottom: 45px;
+  }
+  p:nth-of-type(3){
+    font-family: "SourceSansPro-Regular";
+    font-size: 20px;
+    line-height: 38px;
+    font-style: oblique;
+  }
+}

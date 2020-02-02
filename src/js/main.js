@@ -15,3 +15,11 @@ $('.clients-slider').slick({
     slidesToShow: 6,
     slidesToScroll: 1
 });
+
+$('.portfolio-slider').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    variableWidth: true,
+    dots: true
+});

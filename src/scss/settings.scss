@@ -1,6 +1,8 @@
 $mainText: #212121;
+$devider: #e64a19;
 ul {
-  list-style-type: upper-alpha;
+  list-style-type: none;
+
 }
 
 a {
@@ -29,7 +31,17 @@ body {
   margin: 0 auto;
   padding: 0 15px;
   box-sizing: border-box;
+  text-align: center;
   color: $mainText;
+}
+h2{
+  font-family: "SourceSansPro-Bold";
+  font-size: 27px;
+}
+section{
+  font-family: "SourceSansPro-Regular";
+  font-size: 16px;
+  line-height: 33px;
 }
 
 
