@@ -12,6 +12,11 @@ mixin featured-article(caption, content, image, name, date)
             div.author-content
                 p=name
                 p=date
+mixin facts(number,name)
+    li
+        p=number
+        div
+        p=name
 
 doctype html
 html(lang="en")
@@ -20,7 +25,7 @@ html(lang="en")
         meta(name='viewport', content='width=device-width, initial-scale=1')
         title Storyteller
         //favicon
-        link(href='./css/styles.css', rel='stylesheet', type='text/css')
+        //link(href='./css/styles.css', rel='stylesheet', type='text/css')
         link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
 
 body
@@ -136,3 +141,32 @@ body
             p.fa &#xf10e;
             p Happiness cannot be traveled to, owned, earned, or worn. It is the spiritual experience of living every minute with love, grace & gratitude.
             p Denis Waitley
+    section.wr-team-members
+        div.container
+            h2 Team Members
+            p The gentlemen who rented the room would sometimes take their evening meal at home in the living room that was used by everyone, and so the door to this room was often kept closed in the
+            ul
+                li
+                    img(src="./images/8-team-members/member-icon1.png" alt="member-icon")
+                    p James Philly
+                    p Lead Developer
+                li
+                    img(src="./images/8-team-members/member-icon2.png" alt="member-icon")
+                    p Cactus Jack
+                    p 3D Model Designer
+                li
+                    img(src="./images/8-team-members/member-icon3.png" alt="member-icon")
+                    p Jack Sparrow
+                    p Master of All Trade
+                li
+                    img(src="./images/8-team-members/member-icon4.png" alt="member-icon")
+                    p Yaga Squarehead
+                    p Manages Money
+    section.wr-facts
+        div.container
+            h2 Facts & Numbers
+            ul
+                +facts("110", "successful projects")
+                +facts("110", "successful projects")
+                +facts("110", "successful projects")
+                +facts("110", "successful projects")

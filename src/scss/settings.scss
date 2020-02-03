@@ -32,7 +32,6 @@ body {
   padding: 0 15px;
   box-sizing: border-box;
   text-align: center;
-  color: $mainText;
 }
 h2{
   font-family: "SourceSansPro-Bold";
@@ -42,6 +41,7 @@ section{
   font-family: "SourceSansPro-Regular";
   font-size: 16px;
   line-height: 33px;
+  color: $mainText;
 }
 
 

@@ -9,7 +9,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    watch       : false,
+    watch       : true,
     mode        : 'development',//'production', //'development',//
     entry       : [
         './src/index.jade',
@@ -17,7 +17,7 @@ module.exports = {
         './src/js/main.js',
     ],
     output      : {
-        filename: 'js/main.js',
+        filename  : 'js/main.js',
         publicPath: './',
         path      : path.resolve(__dirname, 'dist'),
     },
@@ -30,18 +30,26 @@ module.exports = {
     module      : {
         rules: [
             {
-                test  : /\.js$/,
+                test   : /\.js$/,
                 include: path.resolve(__dirname, 'src/js'),
-                use: {
-                    loader: 'babel-loader',
+                use    : {
+                    loader : 'babel-loader',
                     options: {
                         presets: ['@babel/preset-env']
                     }
                 }
             },
             {
-                test  : /\.html$/,
-                loader: 'html-loader'
+                test: /\.html$/,
+                // loader: 'html-loader'
+                use : {
+                    loader : 'html-loader',
+                    options: {
+                        // conservativeCollapse: false,
+                        // minimize            : true,
+                        attrs               : ['link:href', 'link:type'],
+                    },
+                },
             },
             {
                 test: /\.jade$/,
@@ -66,7 +74,7 @@ module.exports = {
                 use : [
                     'style-loader',
                     {
-                        loader: MiniCssExtractPlugin.loader,
+                        loader : MiniCssExtractPlugin.loader,
                         options: {
                             publicPath: '../'
                         }
@@ -97,9 +105,9 @@ module.exports = {
                     {
                         loader : 'file-loader',
                         options: {
-                            name      : '[folder]/[name].[ext]',
-                            outputPath: 'images',
-                            esModule  : false,
+                            name           : '[folder]/[name].[ext]',
+                            outputPath     : 'images',
+                            esModule       : false,
                             useRelativePath: true,
 
                         },
@@ -131,8 +139,8 @@ module.exports = {
     ],
     devServer   : {
         // contentBase: [path.join(__dirname, 'dist'), path.join(__dirname, 'src')]
-        contentBase: './dist',
+        contentBase     : './dist',
         watchContentBase: true,
-        port: 9001
+        port            : 9001
     },
 };
