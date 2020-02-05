@@ -17,6 +17,12 @@ mixin facts(number,name)
         p=number
         div
         p=name
+mixin blog-content(timestamp, capture, text, imageurl)
+    div.content
+        p=timestamp
+        h2=capture
+        p=text
+    img(src=imageurl alt='article image')
 
 doctype html
 html(lang="en")
@@ -173,3 +179,21 @@ body
             div.devider
     section.wr-blog
         div.container
+            +blog-content(
+            "Travel / 21st March, 2014",
+            "A New Product Is Coming",
+            "The office assistant was the boss's man, spineless, and with no understanding. What about if he reported sick? But that would be extremely strained and suspicious as in fifteen years of service Gregor had never.",
+            "./images/10-blog/blog1.jpg"
+            )
+            +blog-content(
+                "Gadget / 3rd March, 2014",
+                "Jimmy’s New Xbox Controller",
+                "The office assistant was the boss's man, spineless, and with no understanding. What about if he reported sick? But that would be extremely strained and suspicious as in fifteen years of service Gregor had never.",
+                "./images/10-blog/blog2.jpg"
+            )
+            +blog-content(
+                "Travel / 21st March, 2014",
+                "A New Product Is Coming",
+                "The office assistant was the boss's man, spineless, and with no understanding. What about if he reported sick? But that would be extremely strained and suspicious as in fifteen years of service Gregor had never.",
+                "./images/10-blog/blog3.jpg"
+            )

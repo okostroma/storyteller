@@ -398,3 +398,37 @@ header {
     font-family: "SourceSansPro-Bold";
   }
 }
+.wr-blog{
+  padding: 110px 0 96px;
+  .container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 44px 30px;
+    grid-auto-flow: dense;
+  }
+  h2{
+    font-family: "MyriadPro-Regular";
+    margin-bottom: 50px;
+  }
+  img{
+    width: 100%;
+  }
+  .content{
+    margin: auto;
+    padding: 0 70px;
+  }
+  img:nth-of-type(even){
+    grid-row-start: 2;
+  }
+  .content > p:first-child{
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .wr-blog .container{
+    grid-template-columns: 1fr;
+    img:nth-of-type(even){
+      grid-row-start: 4;
+    }
+  }
+}
