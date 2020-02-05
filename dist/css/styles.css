@@ -721,6 +721,13 @@ section {
   font-display: block;
   src: local("Open Sans Regular"), url(../fonts/SourceSansPro-SemiBold.ttf) format("truetype"), local("Arial"); }
 
+.devider {
+  width: 75px;
+  height: 7px;
+  margin: 0 auto;
+  background-color: #e64a19;
+  margin-bottom: 52px; }
+
 .wr-header {
   height: 100vh;
   background-image: url(../images/1-header/background.jpg);
@@ -917,12 +924,6 @@ header {
   .wr-portfolio p {
     max-width: 770px;
     margin: 0 auto 57px; }
-  .wr-portfolio .devider {
-    width: 75px;
-    height: 7px;
-    margin: 0 auto;
-    background-color: #e64a19;
-    margin-bottom: 52px; }
   .wr-portfolio .portfolio-sections {
     max-width: 400px;
     margin: 0 auto 50px;
@@ -1002,9 +1003,10 @@ header {
     margin-bottom: 70px; }
   .wr-facts ul {
     max-width: 630px;
-    padding: 0 15px;
+    padding: 65px 15px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
     margin: auto;
     position: relative; }
@@ -1021,7 +1023,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 36px;
+    margin: 0 15px 36px;
     font-size: 27px;
     text-align: center;
     z-index: 5; }

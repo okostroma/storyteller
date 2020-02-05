@@ -4,6 +4,13 @@
 @import "../js/slick/slick.css";
 @import "../js/slick/slick-theme.css";
 
+.devider{
+  width: 75px;
+  height: 7px;
+  margin: 0 auto;
+  background-color: $devider;
+  margin-bottom: 52px;
+}
 .wr-header {
   height: 100vh;
   background-image: url("../images/1-header/background.jpg");
@@ -249,13 +256,6 @@ header {
     max-width: 770px;
     margin: 0 auto 57px;
   }
-  .devider{
-    width: 75px;
-    height: 7px;
-    margin: 0 auto;
-    background-color: $devider;
-    margin-bottom: 52px;
-  }
   .portfolio-sections{
     max-width: 400px;
     margin: 0 auto 50px;
@@ -350,17 +350,15 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   color: #eeeeee;
-  //.container{
-  //
-  //}
   h2{
     margin-bottom: 70px;
   }
   ul{
     max-width: 630px;
-    padding: 0 15px;
+    padding: 65px 15px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
     margin: auto;
     position: relative;
@@ -371,7 +369,6 @@ header {
     position: absolute;
     width: 100%;
     height: 100%;
-    //padding: 0 15px;
     background-color: #ffffff;
     opacity: 0.34;
   }
@@ -380,7 +377,9 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 36px;
+    margin: 0 15px 36px;
+    //padding: 0 15px 36px;
+    //padding-bottom: 36px;
     font-size: 27px;
     text-align: center;
 
