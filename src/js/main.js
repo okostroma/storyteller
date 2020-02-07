@@ -9,7 +9,6 @@ $('.articles-slider').slick({
     slidesToShow: 3,
     slidesToScroll: 1
 });
-
 $('.clients-slider').slick({
     infinite: true,
     slidesToShow: 6,
@@ -23,4 +22,10 @@ $('.portfolio-slider').slick({
     slidesToScroll: 1,
     variableWidth: true,
     dots: true
+});
+
+$('.next-posts').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1
 });

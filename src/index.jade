@@ -18,7 +18,7 @@ mixin facts(number,name)
         div
         p=name
 mixin blog-content(timestamp, capture, text, imageurl)
-    div.content
+    div.post-content
         p=timestamp
         h2=capture
         p=text
@@ -132,11 +132,16 @@ body
             p The gentlemen who rented the room would sometimes take their evening meal at home in the living room that was used by everyone, and so the door to this room was often kept closed in the
             div.devider
             ul.portfolio-sections
-                li Art
-                li Mystery
-                li Illusion
-                li Travel
-                li Paintings
+                li
+                    button Art
+                li
+                    button Mystery
+                li
+                    button Illusion
+                li
+                    button Travel
+                li
+                    button Paintings
         div.portfolio-slider
             img(src="./images/6-portfolio/image1.jpg" alt="portfolio-image")
             img(src="./images/6-portfolio/image2.jpg" alt="portfolio-image")
@@ -179,21 +184,60 @@ body
             div.devider
     section.wr-blog
         div.container
-            +blog-content(
-            "Travel / 21st March, 2014",
-            "A New Product Is Coming",
-            "The office assistant was the boss's man, spineless, and with no understanding. What about if he reported sick? But that would be extremely strained and suspicious as in fifteen years of service Gregor had never.",
-            "./images/10-blog/blog1.jpg"
-            )
-            +blog-content(
-                "Gadget / 3rd March, 2014",
-                "Jimmy’s New Xbox Controller",
-                "The office assistant was the boss's man, spineless, and with no understanding. What about if he reported sick? But that would be extremely strained and suspicious as in fifteen years of service Gregor had never.",
-                "./images/10-blog/blog2.jpg"
-            )
-            +blog-content(
+            div.wr-posts
+                +blog-content(
                 "Travel / 21st March, 2014",
                 "A New Product Is Coming",
                 "The office assistant was the boss's man, spineless, and with no understanding. What about if he reported sick? But that would be extremely strained and suspicious as in fifteen years of service Gregor had never.",
-                "./images/10-blog/blog3.jpg"
-            )
+                "./images/10-blog/blog1.jpg"
+                )
+                +blog-content(
+                    "Gadget / 3rd March, 2014",
+                    "Jimmy’s New Xbox Controller",
+                    "The office assistant was the boss's man, spineless, and with no understanding. What about if he reported sick? But that would be extremely strained and suspicious as in fifteen years of service Gregor had never.",
+                    "./images/10-blog/blog2.jpg"
+                )
+                +blog-content(
+                    "Travel / 21st March, 2014",
+                    "A New Product Is Coming",
+                    "The office assistant was the boss's man, spineless, and with no understanding. What about if he reported sick? But that would be extremely strained and suspicious as in fifteen years of service Gregor had never.",
+                    "./images/10-blog/blog3.jpg"
+                )
+        div.wr-next-posts
+            div.container
+                ul.next-posts
+                    li
+                        button
+                            h3 Another Day In Paradise
+                            p Travel / 21st March, 2014 copy
+                    li
+                        button
+                            h3 Jimmy’s New Book on Aliens
+                            p Personal / 21st March, 2014
+                    li
+                        button
+                            h3 Sarah’s New House
+                            p Personal / 21st March, 2014
+                    li
+                        button
+                            h3 Another Day In Paradise
+                            p Travel / 21st March, 2014 copy
+    section.wr-tweets
+        div.container
+            p
+                a.fa(href="#") &#xf099;
+            img(src="./images/4-featured-articles/photo2.jpg" alt="photo-icon")
+            p Happiness cannot be traveled to, owned, earned, or worn. It is the spiritual experience of living every minute with love, grace & gratitude.
+            p @loveless
+    footer
+        div.container
+            div.wr-footer
+
+                form(action="#" method="post")
+                    h2 UNICORN
+                    p One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his
+                    div
+                        input(type="email" id="email" name="email" placeholder="EMAIL")
+                        input(type="text" id="subject" name="subject" placeholder="SUBJECT")
+                        input(type="text" id="message" name="message" placeholder="MESSAGE")
+                    button(type="submit") SEND &#9654
