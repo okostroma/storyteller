@@ -666,7 +666,8 @@ ul {
   list-style-type: none; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: inherit; }
 
 button {
   cursor: pointer;
@@ -1119,6 +1120,16 @@ footer {
   footer .wr-footer {
     text-align: left;
     border-bottom: 1px solid rgba(128, 128, 128, 0.4); }
+    footer .wr-footer section {
+      display: inline-block;
+      vertical-align: top;
+      color: inherit; }
+    footer .wr-footer section:not(:first-child) {
+      max-width: 200px;
+      width: 100%; }
+    footer .wr-footer .form {
+      max-width: 570px;
+      width: 100%; }
   footer h2 {
     margin-bottom: 38px;
     font-family: "SourceSansPro-Bold";
@@ -1131,14 +1142,12 @@ footer {
   footer h2, footer h3 {
     text-transform: uppercase; }
   footer form {
-    max-width: 470px;
-    text-align: justify; }
+    max-width: 485px;
+    padding-right: 15px; }
     footer form > p {
-      max-width: 450px;
       margin-bottom: 40px;
       line-height: 25px; }
     footer form > div {
-      max-width: 435px;
       margin-bottom: 92px; }
     footer form input {
       margin-bottom: 22px;
