@@ -32,7 +32,6 @@ html(lang="en")
         title Storyteller
         //favicon
         link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
-
 body
     section.wr-header
         div.container
@@ -231,7 +230,7 @@ body
     footer
         div.container
             div.wr-footer
-                section.form
+                section.form-container
                     h2 UNICORN
                     form(action="#" method="post")
                         p One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his
@@ -240,9 +239,10 @@ body
                             input(type="text" id="subject" name="subject" placeholder="SUBJECT")
                             input(type="text" id="message" name="message" placeholder="MESSAGE")
                         button(type="submit") SEND &#9654
-                section.nav
-                    h3 Links
+                section.links-container
                     ul
+                        li
+                            h3 Links
                         li
                             a(href='#') Home
                         li
@@ -257,9 +257,9 @@ body
                             a(href='#') Work Hours
                         li
                             a(href='#') Call Hours
-                section.friends
-                    h3 Friends
                     ul
+                        li
+                            h3 Friends
                         li
                             a(href='#') Home
                         li
@@ -270,9 +270,9 @@ body
                             a(href='#') Menu
                         li
                             a(href='#') Restaurants
-                section.social
-                    h3 Social
                     ul
+                        li
+                            h3 Social
                         li
                             a(href='#') Facebook
                         li
@@ -289,4 +289,18 @@ body
                             a(href='#') Flickr
                         li
                             a(href='#') Others
-            div.privacy-policy
+
+
+            div.wr-privacy-policy
+                div
+                    p One morning, when Gregor Samsa woke from troubled dreams, he found
+                    p © 2015 Your Awesome Company
+                ul
+                    li
+                        a(href="#") TERMS
+                    li
+                        a(href="#") Privacy Policy
+                    li
+                        a(href="#") Contact
+                    li
+                        a(href="#") Job
