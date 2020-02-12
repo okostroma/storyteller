@@ -1,8 +1,13 @@
 @import "./reset.scss";
 @import "./settings.scss";
 @import "./fonts.scss";
+@import "./animate.scss";
 @import "../js/slick/slick.css";
 @import "../js/slick/slick-theme.css";
+
+.test{
+  background-color: #999999;
+}
 
 .devider {
   width: 75px;
@@ -13,8 +18,9 @@
 }
 
 .wr-header {
-  height: 100vh;
-  background-image: url("../images/1-header/background.jpg");
+  height: 85vh;
+  //background-image: url("../images/1-header/background.jpg");
+  background-image: url("../../originals/sea1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 181px;
@@ -139,8 +145,10 @@ header {
     margin-bottom: 40px;
   }
   article {
+
     max-width: 272px;
     text-align: left;
+    opacity: 0;
     img {
       display: block;
       margin-bottom: 30px;
