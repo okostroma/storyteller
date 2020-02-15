@@ -33,32 +33,32 @@ html(lang="en")
         //favicon
         link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
 body
-    section.wr-header
+    section.wr-header(id="wr-header")
         div.container
             header
                 a.logo(href='#') unicorn
                 nav
                     ul.nav-menu
                         li.active
-                            a(href='#') home
+                            a(href='#wr-header') home
                         li
-                            a(href='#') about
+                            a(href='#wr-intro') about
                         li
-                            a(href='#') stories
+                            a(href='#wr-portfolio') stories
                         li
-                            a(href='#') hello
+                            a(href='#wr-clients') clients
                     button(class="fa fa-bars")
             section.header-content
                 h1 STORYTELLER
                 div.line
                 p One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.
                 button read the rest
-    section.wr-intro
+    section.wr-intro(id="wr-intro")
         div.container
-            img(src="./images/2-intro/broccoli.png" alt="broccoli-icon")
+            img(class="view-animate #zoomIn" src="./images/2-intro/broccoli.png" alt="broccoli-icon")
             h2 Who & Why
             p The gentlemen who rented the room would sometimes take their evening meal at home in the living room that was used by everyone, and so the door to this room was often kept closed in the evening. But Gregor found it easy to give up having the door open, he had, after all, often failed to make use of it when it was open and, without the family having noticed it, lain in his room in its darkest corner. One time, though, the charwoman left the door.
-    section.wr-services
+    section.wr-services(id="wr-services")
         div.container
             +services-article(
             {url: "./images/3-services/clock.png", alt: "clock-icon"},
@@ -76,8 +76,7 @@ body
             "The gentlemen who rented the room would sometimes take their evening meal at home in the living."
             )
             //<i style="font-size:24px" class="fa">&#xf054;</i>
-    //
-    section.wr-featured
+    section.wr-featured(id="wr-featured")
         div.container
             h2 Featured Articles
             p The gentlemen who rented the room would sometimes take their evening meal at home in the living room that was used by everyone, and so the door to this room was often kept closed in the
@@ -110,7 +109,7 @@ body
                     "mason johnston",
                     "21/08/2013"
                 )
-    section.wr-clients
+    section.wr-clients(id="wr-clients")
         div.container
             h2 Clients
             div.clients-slider
@@ -125,7 +124,7 @@ body
                 img(src="./images/5-clients/client9.png" alt="client-icon")
                 img(src="./images/5-clients/client10.png" alt="client-icon")
                 img(src="./images/5-clients/client11.png" alt="client-icon")
-    section.wr-portfolio
+    section.wr-portfolio(id="wr-portfolio")
         div.container
             h2 Portfolio & Screenshots
             p The gentlemen who rented the room would sometimes take their evening meal at home in the living room that was used by everyone, and so the door to this room was often kept closed in the
@@ -146,12 +145,12 @@ body
             img(src="./images/6-portfolio/image2.jpg" alt="portfolio-image")
             img(src="./images/6-portfolio/image3.jpg" alt="portfolio-image")
             img(src="./images/6-portfolio/image4.jpg" alt="portfolio-image")
-    section.wr-quote
+    section.wr-quote(id="wr-quote")
         div.container
             p.fa &#xf10e;
             p Happiness cannot be traveled to, owned, earned, or worn. It is the spiritual experience of living every minute with love, grace & gratitude.
             p Denis Waitley
-    section.wr-team-members
+    section.wr-team-members(id="wr-team-members")
         div.container
             h2 Team Members
             p The gentlemen who rented the room would sometimes take their evening meal at home in the living room that was used by everyone, and so the door to this room was often kept closed in the
@@ -172,7 +171,7 @@ body
                     img(src="./images/8-team-members/member-icon4.png" alt="member-icon")
                     p Yaga Squarehead
                     p Manages Money
-    section.wr-facts
+    section.wr-facts(id="wr-facts")
         div.container
             h2 Facts & Numbers
             ul
@@ -181,7 +180,7 @@ body
                 +facts("30", "open source plugins")
                 +facts("13", "open source themes")
             div.devider
-    section.wr-blog
+    section.wr-blog(id="wr-blog")
         div.container
             div.wr-posts
                 +blog-content(
@@ -221,7 +220,7 @@ body
                         button
                             h3 Another Day In Paradise
                             p Travel / 21st March, 2014 copy
-    section.wr-tweets
+    section.wr-tweets(id="wr-tweets")
         div.container
             p
                 a.fa(href="#") &#xf099;

@@ -52,3 +52,23 @@ function lightSpeedIn(elements) {
 $(window).scroll(function () {
     !animated && $(this).scrollTop() > 900 && lightSpeedIn($articles);
 });
+
+$(document).ready(function(){
+    $(".nav-menu").on("click","a", function (event) {
+        event.preventDefault();
+        let id  = $(this).attr('href'),
+            top = $(id).offset().top;
+
+        let $el = $(id).find('.view-animate');
+        const className =  $el.length && $el.attr('class');
+        const animateClass = className && className.substr(className.indexOf('#')+1);
+
+        console.log($el.length);
+
+        animateClass && $el.removeClass(animateClass).css( "opacity", "0" );
+
+        $('body,html').animate({scrollTop: top}, 1000, function(){
+            $el.css( "opacity", "1" ).addClass(animateClass);
+        });
+    });
+});

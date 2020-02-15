@@ -18,9 +18,9 @@
 }
 
 .wr-header {
-  height: 85vh;
-  //background-image: url("../images/1-header/background.jpg");
-  background-image: url("../../originals/sea1.jpg");
+  height: 100vh;
+  background-image: url("../images/1-header/background.jpg");
+  //background-image: url("../../originals/sea1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 181px;
@@ -166,11 +166,17 @@ header {
     margin: auto;
     margin-bottom: 108px;
   }
-  .slick-next {
-    right: -50px;
+  .articles-slider{
+    width: 90%;
+    margin: 0 auto;
   }
-  .slick-prev {
-    left: -100px;
+  .slick-next {
+    //right: -50px;
+    right: -3%;
+  }
+  .slick-prev, .slick-prev:before{
+    display: none;
+    //left: -100px;
   }
   .article {
     display: inline-block;
