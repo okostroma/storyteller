@@ -63,6 +63,7 @@ header {
     height: 70px;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
   }
   nav li {
     display: flex;
@@ -141,10 +142,11 @@ header {
 
 .wr-services {
   background-color: #efefef;
-  padding: 68px 0 113px;
+  padding: 68px 0 88px;
   .container {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
   }
   h2 {
     margin-bottom: 40px;
@@ -153,6 +155,7 @@ header {
 
     max-width: 272px;
     text-align: left;
+    margin-bottom: 30px;
     opacity: 0;
     img {
       display: block;
@@ -160,7 +163,6 @@ header {
     }
   }
 }
-
 .wr-featured {
   padding: 108px 0 142px;
   h2 {
@@ -171,6 +173,9 @@ header {
     margin: auto;
     margin-bottom: 108px;
   }
+  .slider-container {
+    width: 100%;
+  }
   .slick-next {
     right: -1%;
   }
@@ -178,10 +183,11 @@ header {
     display: none;
     //left: -100px;
   }
+
   .article {
     display: inline-block;
     position: relative;
-    max-width: 370px;
+    max-width: 290px;
     width: 100%;
     padding: 70px 40px 52px;
     margin: 0 15px;
@@ -285,6 +291,9 @@ header {
     justify-content: space-around;
     align-items: center;
   }
+  .slider-container {
+    width: 100%;
+  }
   .portfolio img {
     width: 440px;
     height: 360px;
@@ -350,14 +359,20 @@ header {
   }
   .container > p {
     max-width: 770px;
-    margin: 0 auto 100px;
+    margin: 0 auto 85px;
   }
   ul {
     width: 100%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  li{
+    margin-bottom: 15px;
   }
   li img {
+    height: 109px;
     margin-bottom: 55px;
   }
   li p {
@@ -437,7 +452,7 @@ header {
     }
     img {
       width: 100%;
-      min-width: 450px;
+      //min-width: 450px;
       max-width: 550px;
       margin: 0 auto;
     }
@@ -455,7 +470,7 @@ header {
   .wr-next-posts {
     background-color: #efefef;
     padding: 75px 0 70px;
-    li {
+    .next-post{
       display: block;
       max-width: 400px;
       width: 100%;
@@ -626,34 +641,35 @@ footer {
 //375px
 //>=320px
 
-@media screen and (max-width: 970px) {
-  .wr-blog .wr-posts {
-    grid-template-columns: 1fr;
-    img:nth-of-type(even) {
-      grid-row-start: 4;
-    }
+
+
+@media screen and (max-width: 1215px) {
+  footer .wr-footer .form-container{
+    margin-left: 50px;
   }
 }
-
 @media screen and (max-width: 1090px) {
   footer .wr-footer {
     flex-direction: column;
     align-items: center;
   }
 }
-@media screen and (max-width: 1215px) {
-  footer .wr-footer .form-container{
-    margin-left: 50px;
+@media screen and (max-width: 970px) {
+  .wr-blog {
+    .wr-posts {
+
+      grid-template-columns: 1fr;
+      img:nth-of-type(even) {
+        grid-row-start: 4;
+      }
+    }
+    .post-content{
+      padding: 0;
+    }
   }
-}
-@media screen and (max-width: 768px) {
-  //.slick-arrow:before{
-  //  //background-color: red;
-  //  display: none;
-  //}
 
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
   footer .wr-privacy-policy{
     flex-direction: column-reverse;
     align-items: center;
@@ -662,9 +678,8 @@ footer {
       align-items: center;
     }
   }
-
 }
-@media screen and (max-width: 650px) {
+@media all and (max-width: 650px) {
   footer .wr-footer{
     .links-container{
       display: flex;
@@ -678,5 +693,19 @@ footer {
     .form-container{
       margin: 0 auto;
     }
+  }
+}
+@media all and (max-width: 414px) {
+  header .nav-menu{
+    display: none;
+  }
+  .wr-team-members ul {
+    max-width: 330px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .wr-featured .article {
+    width: 250px;
+    padding: 70px 20px 52px;
   }
 }
