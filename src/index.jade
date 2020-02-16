@@ -55,7 +55,7 @@ body
                 button read the rest
     section.wr-intro(id="wr-intro")
         div.container
-            img(class="view-animate #zoomIn" src="./images/2-intro/broccoli.png" alt="broccoli-icon")
+            img(class="view-animate #bounce" src="./images/2-intro/broccoli.png" alt="broccoli-icon")
             h2 Who & Why
             p The gentlemen who rented the room would sometimes take their evening meal at home in the living room that was used by everyone, and so the door to this room was often kept closed in the evening. But Gregor found it easy to give up having the door open, he had, after all, often failed to make use of it when it was open and, without the family having noticed it, lain in his room in its darkest corner. One time, though, the charwoman left the door.
     section.wr-services(id="wr-services")
@@ -80,7 +80,7 @@ body
         div.container
             h2 Featured Articles
             p The gentlemen who rented the room would sometimes take their evening meal at home in the living room that was used by everyone, and so the door to this room was often kept closed in the
-            div.articles-slider
+            div(class="slider-container articles")
                 +featured-article(
                     "comic",
                     "A million ways to die in the wild wild wild west",
@@ -112,7 +112,7 @@ body
     section.wr-clients(id="wr-clients")
         div.container
             h2 Clients
-            div.clients-slider
+            div(class="slider-container clients")
                 img(src="./images/5-clients/client1.png" alt="client-icon")
                 img(src="./images/5-clients/client2.png" alt="client-icon")
                 img(src="./images/5-clients/client3.png" alt="client-icon")
@@ -126,7 +126,7 @@ body
                 img(src="./images/5-clients/client11.png" alt="client-icon")
     section.wr-portfolio(id="wr-portfolio")
         div.container
-            h2 Portfolio & Screenshots
+            h2(class="view-animate #pulse") Portfolio & Screenshots
             p The gentlemen who rented the room would sometimes take their evening meal at home in the living room that was used by everyone, and so the door to this room was often kept closed in the
             div.devider
             ul.portfolio-sections
@@ -140,7 +140,7 @@ body
                     button Travel
                 li
                     button Paintings
-        div.portfolio-slider
+        div(class="slider-container portfolio")
             img(src="./images/6-portfolio/image1.jpg" alt="portfolio-image")
             img(src="./images/6-portfolio/image2.jpg" alt="portfolio-image")
             img(src="./images/6-portfolio/image3.jpg" alt="portfolio-image")
@@ -203,7 +203,7 @@ body
                 )
         div.wr-next-posts
             div.container
-                ul.next-posts
+                ul(class="slider-container next-posts")
                     li
                         button
                             h3 Another Day In Paradise

@@ -34,6 +34,16 @@ body {
   box-sizing: border-box;
   text-align: center;
 }
+.slider-container{
+  width: 90%;
+  margin: 0 auto;
+}
+.slider-container .slick-next {
+  right: -3%;
+}
+.slider-container .slick-prev, .slick-prev:before{
+  left: -3%;
+}
 h2{
   font-family: "SourceSansPro-Bold";
   font-size: 27px;
