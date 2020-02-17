@@ -32,12 +32,12 @@ module.exports = {
             {
                 test   : /\.js$/,
                 include: path.resolve(__dirname, 'src/js'),
-                use    : {
-                    loader : 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env']
-                    }
-                }
+                // use    : {
+                //     loader : 'babel-loader',
+                //     options: {
+                //         presets: ['@babel/preset-env']
+                //     }
+                // }
             },
             {
                 test: /\.html$/,

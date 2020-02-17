@@ -1520,6 +1520,19 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center; }
+    .wr-portfolio .portfolio-sections li {
+      max-width: 150px;
+      width: 100%;
+      position: relative;
+      transition: width 0.3s ease-out; }
+    .wr-portfolio .portfolio-sections .active::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 3px;
+      bottom: 0;
+      background-color: #e64a19; }
   .wr-portfolio .slider-container {
     width: 100%; }
   .wr-portfolio .portfolio img {
