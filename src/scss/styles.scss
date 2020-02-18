@@ -37,11 +37,10 @@ header {
   font-family: "SourceSansPro-Bold";
   font-size: 16px;
   color: $mainText;
-  //margin-bottom: 400px;
-  //margin-bottom: 40%;
 
   .logo {
     font-size: 18px;
+    margin: 0 15px;
   }
 
   a {
@@ -85,12 +84,28 @@ header {
     font-size: 24px
   }
 }
+//max-width: 560px;
+//width: 100%;
+//max-height: 350px;
+//height: 100%;
+//display: flex;
+//flex-direction: column;
+//justify-content: space-between;
+//align-items: flex-end;
+//margin-top: 20px;
+//text-align: right;
+//color: #212121;
+//font-size: 18px;
 
 .header-content {
-  max-width: 570px;
+  max-height: 350px;
+  height: 100%;
+
+  max-width: 560px;
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: flex-end;
   margin-left: auto;
   text-align: right;
@@ -98,23 +113,36 @@ header {
   font-size: 18px;
 
   h1 {
+    position: relative;
+    margin-bottom: 35px;
     font-family: "SourceSansPro-Black";
     font-size: 72px;
     text-transform: uppercase;
-    margin-bottom: 30px;
   }
-  .line {
+  h1::before{
+    content: "";
+    position: absolute;
+    display: block;
     width: 138px;
     height: 4px;
     background-color: $mainText;
     margin-right: 2px;
     margin-bottom: 44px;
+    right: 0;
+    top: 63px;
   }
+  //.line {
+  //  width: 138px;
+  //  height: 4px;
+  //  background-color: $mainText;
+  //  margin-right: 2px;
+  //  margin-bottom: 44px;
+  //}
   p {
     font-family: "SourceSansPro-Regular";
     font-size: 18px;
     line-height: 34px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
   button {
     width: 272px;
@@ -153,7 +181,7 @@ header {
   }
   article {
 
-    max-width: 272px;
+    max-width: 269px;
     text-align: left;
     margin-bottom: 30px;
     opacity: 0;
@@ -312,9 +340,6 @@ header {
   .portfolio img {
     width: 440px;
     height: 360px;
-  }
-  .portfolio button {
-    display: none;
   }
   .slick-prev, .slick-next, .slick-next:before, .slick-prev:before {
     display: none;
@@ -696,6 +721,11 @@ footer {
   }
 }
 @media all and (max-width: 650px) {
+  .header-content {
+    h1 {
+      font-size: 14vw;
+    }
+  }
   footer .wr-footer{
     .links-container{
       display: flex;
@@ -715,13 +745,79 @@ footer {
   header .nav-menu{
     display: none;
   }
+  .wr-services{
+    padding: 40px 0 30px;
+    article{
+      margin-bottom: 20px;
+      img{
+        margin-bottom: 15px;
+      }
+      h2{
+        margin-bottom: 10px;
+      }
+    }
+  }
   .wr-team-members ul {
     max-width: 330px;
   }
+  .header-content {
+    p {
+      line-height: 25px;
+      margin-bottom: 20px;
+    }
+  }
 }
 @media screen and (max-width: 320px) {
+  .wr-header {
+    padding-bottom: 50px;
+  }
+
   .wr-featured .article {
     width: 250px;
     padding: 70px 20px 52px;
+  }
+}
+//@media screen and (max-height: 660px) {
+@media screen and (max-height: 568px) {
+  .wr-intro {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    h2 {
+      margin-bottom: 40px;
+    }
+  }
+}
+@media screen and (max-height: 414px) {
+  .wr-header {
+    padding-bottom: 15px;
+  }
+  .header-content {
+    h1 {
+      font-size: 56px;
+    }
+    p {
+      font-family: "SourceSansPro-Regular";
+      font-size: 18px;
+      line-height: 1.7em;
+      margin-bottom: 20px;
+    }
+  }
+  //.wr-intro {
+  //  height: 100vh;
+  //  display: flex;
+  //  align-items: center;
+  //  padding: 0;
+  //}
+}
+@media screen and (max-height: 320px) {
+  .header-content p {
+    margin-bottom: 5px;
+  }
+  .wr-intro {
+    h2 {
+      margin-bottom: 20px;
+    }
   }
 }

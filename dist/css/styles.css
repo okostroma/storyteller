@@ -1326,7 +1326,8 @@ header {
   font-size: 16px;
   color: #212121; }
   header .logo {
-    font-size: 18px; }
+    font-size: 18px;
+    margin: 0 15px; }
   header a {
     color: #212121;
     text-transform: uppercase; }
@@ -1358,31 +1359,40 @@ header {
     font-size: 24px; }
 
 .header-content {
-  max-width: 570px;
+  max-height: 350px;
+  height: 100%;
+  max-width: 560px;
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: flex-end;
   margin-left: auto;
   text-align: right;
   color: #212121;
   font-size: 18px; }
   .header-content h1 {
+    position: relative;
+    margin-bottom: 35px;
     font-family: "SourceSansPro-Black";
     font-size: 72px;
-    text-transform: uppercase;
-    margin-bottom: 30px; }
-  .header-content .line {
+    text-transform: uppercase; }
+  .header-content h1::before {
+    content: "";
+    position: absolute;
+    display: block;
     width: 138px;
     height: 4px;
     background-color: #212121;
     margin-right: 2px;
-    margin-bottom: 44px; }
+    margin-bottom: 44px;
+    right: 0;
+    top: 63px; }
   .header-content p {
     font-family: "SourceSansPro-Regular";
     font-size: 18px;
     line-height: 34px;
-    margin-bottom: 60px; }
+    margin-bottom: 20px; }
   .header-content button {
     width: 272px;
     height: 49px;
@@ -1411,7 +1421,7 @@ header {
   .wr-services h2 {
     margin-bottom: 40px; }
   .wr-services article {
-    max-width: 272px;
+    max-width: 269px;
     text-align: left;
     margin-bottom: 30px;
     opacity: 0; }
@@ -1538,8 +1548,6 @@ header {
   .wr-portfolio .portfolio img {
     width: 440px;
     height: 360px; }
-  .wr-portfolio .portfolio button {
-    display: none; }
   .wr-portfolio .slick-prev, .wr-portfolio .slick-next, .wr-portfolio .slick-next:before, .wr-portfolio .slick-prev:before {
     display: none; }
   .wr-portfolio .slick-dots {
@@ -1821,6 +1829,8 @@ footer {
       align-items: center; } }
 
 @media all and (max-width: 650px) {
+  .header-content h1 {
+    font-size: 14vw; }
   footer .wr-footer .links-container {
     display: flex;
     justify-content: space-around;
@@ -1834,11 +1844,50 @@ footer {
 @media all and (max-width: 414px) {
   header .nav-menu {
     display: none; }
+  .wr-services {
+    padding: 40px 0 30px; }
+    .wr-services article {
+      margin-bottom: 20px; }
+      .wr-services article img {
+        margin-bottom: 15px; }
+      .wr-services article h2 {
+        margin-bottom: 10px; }
   .wr-team-members ul {
-    max-width: 330px; } }
+    max-width: 330px; }
+  .header-content p {
+    line-height: 25px;
+    margin-bottom: 20px; } }
 
 @media screen and (max-width: 320px) {
+  .wr-header {
+    padding-bottom: 50px; }
   .wr-featured .article {
     width: 250px;
     padding: 70px 20px 52px; } }
+
+@media screen and (max-height: 568px) {
+  .wr-intro {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 15px 0; }
+    .wr-intro h2 {
+      margin-bottom: 40px; } }
+
+@media screen and (max-height: 414px) {
+  .wr-header {
+    padding-bottom: 15px; }
+  .header-content h1 {
+    font-size: 56px; }
+  .header-content p {
+    font-family: "SourceSansPro-Regular";
+    font-size: 18px;
+    line-height: 1.7em;
+    margin-bottom: 20px; } }
+
+@media screen and (max-height: 320px) {
+  .header-content p {
+    margin-bottom: 5px; }
+  .wr-intro h2 {
+    margin-bottom: 20px; } }
 

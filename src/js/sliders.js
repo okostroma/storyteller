@@ -91,6 +91,7 @@ $('.articles').slick({
         {
             breakpoint: 991,
             settings  : {
+                arrows        : false,
                 slidesToShow: 2,
                 dots        : true
             }

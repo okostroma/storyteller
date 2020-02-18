@@ -50,183 +50,184 @@ body
                     button(class="fa fa-bars")
             section.header-content
                 h1 STORYTELLER
-                div.line
+                //div.line
                 p One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.
                 button read the rest
-    section.wr-intro(id="wr-intro")
-        div.container
-            img(class="view-animate #bounce" src="./images/2-intro/broccoli.png" alt="broccoli-icon")
-            h2 Who & Why
-            p The gentlemen who rented the room would sometimes take their evening meal at home in the living room that was used by everyone, and so the door to this room was often kept closed in the evening. But Gregor found it easy to give up having the door open, he had, after all, often failed to make use of it when it was open and, without the family having noticed it, lain in his room in its darkest corner. One time, though, the charwoman left the door.
-    section.wr-services(id="wr-services")
-        div.container
-            +services-article(
-            {url: "./images/3-services/clock.png", alt: "clock-icon"},
-            "An Wow Feature",
-            "The gentlemen who rented the room would sometimes take their evening meal at home in the living."
-            )
-            +services-article(
-            {url: "./images/3-services/vector.png", alt: "vector-icon"},
-            "An Wow Feature",
-            "The gentlemen who rented the room would sometimes take their evening meal at home in the living."
-            )
-            +services-article(
-            {url: "./images/3-services/landworking.png", alt: "landworking-icon"},
-            "An Wow Feature",
-            "The gentlemen who rented the room would sometimes take their evening meal at home in the living."
-            )
-            //<i style="font-size:24px" class="fa">&#xf054;</i>
-    section.wr-featured(id="wr-featured")
-        div.container
-            h2 Featured Articles
-            p The gentlemen who rented the room would sometimes take their evening meal at home in the living room that was used by everyone, and so the door to this room was often kept closed in the
-            div(class="slider-container articles")
-                +featured-article(
-                    "comic",
-                    "A million ways to die in the wild wild wild west",
-                    {url : "./images/4-featured-articles/photo1.jpg", alt : 'photo-icon'},
-                    "jimmy jefferson",
-                    "21/08/2013"
+    main
+        section.wr-intro(id="wr-intro")
+            div.container
+                img(class="view-animate #bounce" src="./images/2-intro/broccoli.png" alt="broccoli-icon")
+                h2 Who & Why
+                p The gentlemen who rented the room would sometimes take their evening meal at home in the living room that was used by everyone, and so the door to this room was often kept closed in the evening. But Gregor found it easy to give up having the door open, he had, after all, often failed to make use of it when it was open and, without the family having noticed it, lain in his room in its darkest corner. One time, though, the charwoman left the door.
+        section.wr-services(id="wr-services")
+            div.container
+                +services-article(
+                {url: "./images/3-services/clock.png", alt: "clock-icon"},
+                "An Wow Feature",
+                "The gentlemen who rented the room would sometimes take their evening meal at home in the living."
                 )
-                +featured-article(
-                    "lifestyle",
-                    "The most comfortable chair comes with no backpain",
-                    {url : "./images/4-featured-articles/photo2.jpg", alt : 'photo-icon'},
-                    "Gail Gutierrez",
-                    "21/08/2013"
+                +services-article(
+                {url: "./images/3-services/vector.png", alt: "vector-icon"},
+                "A Beautiful Feature",
+                "The gentlemen who rented the room would sometimes take their evening meal at home in the living."
                 )
-                +featured-article(
-                    "travel",
-                    "journey to the center of the earth with jefferson",
-                    {url: "./images/4-featured-articles/photo3.jpg", alt: 'photo-icon'},
-                    "mason johnston",
-                    "21/08/2013"
+                +services-article(
+                {url: "./images/3-services/landworking.png", alt: "landworking-icon"},
+                "An Amazing Feature",
+                "The gentlemen who rented the room would sometimes take their evening meal at home in the living."
                 )
-                +featured-article(
-                    "travel",
-                    "journey to the center of the earth with jefferson",
-                    {url: "./images/4-featured-articles/photo3.jpg", alt: 'photo-icon'},
-                    "mason johnston",
-                    "21/08/2013"
-                )
-    section.wr-clients(id="wr-clients")
-        div.container
-            h2 Clients
-            div(class="slider-container clients")
-                img(src="./images/5-clients/client1.png" alt="client-icon")
-                img(src="./images/5-clients/client2.png" alt="client-icon")
-                img(src="./images/5-clients/client3.png" alt="client-icon")
-                img(src="./images/5-clients/client4.png" alt="client-icon")
-                img(src="./images/5-clients/client5.png" alt="client-icon")
-                img(src="./images/5-clients/client6.png" alt="client-icon")
-                img(src="./images/5-clients/client7.png" alt="client-icon")
-                img(src="./images/5-clients/client8.png" alt="client-icon")
-                img(src="./images/5-clients/client9.png" alt="client-icon")
-                img(src="./images/5-clients/client10.png" alt="client-icon")
-                img(src="./images/5-clients/client11.png" alt="client-icon")
-    section.wr-portfolio(id="wr-portfolio")
-        div.container
-            h2(class="view-animate #pulse") Portfolio & Screenshots
-            p The gentlemen who rented the room would sometimes take their evening meal at home in the living room that was used by everyone, and so the door to this room was often kept closed in the
-            div.devider
-            ul.portfolio-sections
-                li.active
-                    button Art
-                li
-                    button Mystery
-                li
-                    button Illusion
-                li
-                    button Travel
-                li
-                    button Paintings
-        div(class="slider-container portfolio")
-            img(src="./images/6-portfolio/image1.jpg" alt="portfolio-image")
-            img(src="./images/6-portfolio/image2.jpg" alt="portfolio-image")
-            img(src="./images/6-portfolio/image3.jpg" alt="portfolio-image")
-            img(src="./images/6-portfolio/image4.jpg" alt="portfolio-image")
-    section.wr-quote(id="wr-quote")
-        div.container
-            p.fa &#xf10e;
-            p Happiness cannot be traveled to, owned, earned, or worn. It is the spiritual experience of living every minute with love, grace & gratitude.
-            p Denis Waitley
-    section.wr-team-members(id="wr-team-members")
-        div.container
-            h2 Team Members
-            p The gentlemen who rented the room would sometimes take their evening meal at home in the living room that was used by everyone, and so the door to this room was often kept closed in the
-            ul
-                li
-                    img(src="./images/8-team-members/member-icon1.png" alt="member-icon")
-                    p James Philly
-                    p Lead Developer
-                li
-                    img(src="./images/8-team-members/member-icon2.png" alt="member-icon")
-                    p Cactus Jack
-                    p 3D Model Designer
-                li
-                    img(src="./images/8-team-members/member-icon3.png" alt="member-icon")
-                    p Jack Sparrow
-                    p Master of All Trade
-                li
-                    img(src="./images/8-team-members/member-icon4.png" alt="member-icon")
-                    p Yaga Squarehead
-                    p Manages Money
-    section.wr-facts(id="wr-facts")
-        div.container
-            h2 Facts & Numbers
-            ul
-                +facts("110", "successful projects")
-                +facts("25", "awesome clients")
-                +facts("30", "open source plugins")
-                +facts("13", "open source themes")
-            div.devider
-    section.wr-blog(id="wr-blog")
-        div.container
-            div.wr-posts
-                +blog-content(
-                "Travel / 21st March, 2014",
-                "A New Product Is Coming",
-                "The office assistant was the boss's man, spineless, and with no understanding. What about if he reported sick? But that would be extremely strained and suspicious as in fifteen years of service Gregor had never.",
-                "./images/10-blog/blog1.jpg"
-                )
-                +blog-content(
-                    "Gadget / 3rd March, 2014",
-                    "Jimmy’s New Xbox Controller",
-                    "The office assistant was the boss's man, spineless, and with no understanding. What about if he reported sick? But that would be extremely strained and suspicious as in fifteen years of service Gregor had never.",
-                    "./images/10-blog/blog2.jpg"
-                )
-                +blog-content(
+                //<i style="font-size:24px" class="fa">&#xf054;</i>
+        section.wr-featured(id="wr-featured")
+            div.container
+                h2 Featured Articles
+                p The gentlemen who rented the room would sometimes take their evening meal at home in the living room that was used by everyone, and so the door to this room was often kept closed in the
+                div(class="slider-container articles")
+                    +featured-article(
+                        "comic",
+                        "A million ways to die in the wild wild wild west",
+                        {url : "./images/4-featured-articles/photo1.jpg", alt : 'photo-icon'},
+                        "jimmy jefferson",
+                        "21/08/2013"
+                    )
+                    +featured-article(
+                        "lifestyle",
+                        "The most comfortable chair comes with no backpain",
+                        {url : "./images/4-featured-articles/photo2.jpg", alt : 'photo-icon'},
+                        "Gail Gutierrez",
+                        "21/08/2013"
+                    )
+                    +featured-article(
+                        "travel",
+                        "journey to the center of the earth with jefferson",
+                        {url: "./images/4-featured-articles/photo3.jpg", alt: 'photo-icon'},
+                        "mason johnston",
+                        "21/08/2013"
+                    )
+                    +featured-article(
+                        "travel",
+                        "journey to the center of the earth with jefferson",
+                        {url: "./images/4-featured-articles/photo3.jpg", alt: 'photo-icon'},
+                        "mason johnston",
+                        "21/08/2013"
+                    )
+        section.wr-clients(id="wr-clients")
+            div.container
+                h2 Clients
+                div(class="slider-container clients")
+                    img(src="./images/5-clients/client1.png" alt="client-icon")
+                    img(src="./images/5-clients/client2.png" alt="client-icon")
+                    img(src="./images/5-clients/client3.png" alt="client-icon")
+                    img(src="./images/5-clients/client4.png" alt="client-icon")
+                    img(src="./images/5-clients/client5.png" alt="client-icon")
+                    img(src="./images/5-clients/client6.png" alt="client-icon")
+                    img(src="./images/5-clients/client7.png" alt="client-icon")
+                    img(src="./images/5-clients/client8.png" alt="client-icon")
+                    img(src="./images/5-clients/client9.png" alt="client-icon")
+                    img(src="./images/5-clients/client10.png" alt="client-icon")
+                    img(src="./images/5-clients/client11.png" alt="client-icon")
+        section.wr-portfolio(id="wr-portfolio")
+            div.container
+                h2(class="view-animate #pulse") Portfolio & Screenshots
+                p The gentlemen who rented the room would sometimes take their evening meal at home in the living room that was used by everyone, and so the door to this room was often kept closed in the
+                div.devider
+                ul.portfolio-sections
+                    li.active
+                        button Art
+                    li
+                        button Mystery
+                    li
+                        button Illusion
+                    li
+                        button Travel
+                    li
+                        button Paintings
+            div(class="slider-container portfolio")
+                img(src="./images/6-portfolio/image1.jpg" alt="portfolio-image")
+                img(src="./images/6-portfolio/image2.jpg" alt="portfolio-image")
+                img(src="./images/6-portfolio/image3.jpg" alt="portfolio-image")
+                img(src="./images/6-portfolio/image4.jpg" alt="portfolio-image")
+        section.wr-quote(id="wr-quote")
+            div.container
+                p.fa &#xf10e;
+                p Happiness cannot be traveled to, owned, earned, or worn. It is the spiritual experience of living every minute with love, grace & gratitude.
+                p Denis Waitley
+        section.wr-team-members(id="wr-team-members")
+            div.container
+                h2 Team Members
+                p The gentlemen who rented the room would sometimes take their evening meal at home in the living room that was used by everyone, and so the door to this room was often kept closed in the
+                ul
+                    li
+                        img(src="./images/8-team-members/member-icon1.png" alt="member-icon")
+                        p James Philly
+                        p Lead Developer
+                    li
+                        img(src="./images/8-team-members/member-icon2.png" alt="member-icon")
+                        p Cactus Jack
+                        p 3D Model Designer
+                    li
+                        img(src="./images/8-team-members/member-icon3.png" alt="member-icon")
+                        p Jack Sparrow
+                        p Master of All Trade
+                    li
+                        img(src="./images/8-team-members/member-icon4.png" alt="member-icon")
+                        p Yaga Squarehead
+                        p Manages Money
+        section.wr-facts(id="wr-facts")
+            div.container
+                h2 Facts & Numbers
+                ul
+                    +facts("110", "successful projects")
+                    +facts("25", "awesome clients")
+                    +facts("30", "open source plugins")
+                    +facts("13", "open source themes")
+                div.devider
+        section.wr-blog(id="wr-blog")
+            div.container
+                div.wr-posts
+                    +blog-content(
                     "Travel / 21st March, 2014",
                     "A New Product Is Coming",
                     "The office assistant was the boss's man, spineless, and with no understanding. What about if he reported sick? But that would be extremely strained and suspicious as in fifteen years of service Gregor had never.",
-                    "./images/10-blog/blog3.jpg"
-                )
-        div.wr-next-posts
+                    "./images/10-blog/blog1.jpg"
+                    )
+                    +blog-content(
+                        "Gadget / 3rd March, 2014",
+                        "Jimmy’s New Xbox Controller",
+                        "The office assistant was the boss's man, spineless, and with no understanding. What about if he reported sick? But that would be extremely strained and suspicious as in fifteen years of service Gregor had never.",
+                        "./images/10-blog/blog2.jpg"
+                    )
+                    +blog-content(
+                        "Travel / 21st March, 2014",
+                        "A New Product Is Coming",
+                        "The office assistant was the boss's man, spineless, and with no understanding. What about if he reported sick? But that would be extremely strained and suspicious as in fifteen years of service Gregor had never.",
+                        "./images/10-blog/blog3.jpg"
+                    )
+            div.wr-next-posts
+                div.container
+                    ul(class="slider-container next-posts")
+                        li.next-post
+                            button
+                                h3 Another Day In Paradise
+                                p Travel / 21st March, 2014 copy
+                        li.next-post
+                            button
+                                h3 Jimmy’s New Book on Aliens
+                                p Personal / 21st March, 2014
+                        li.next-post
+                            button
+                                h3 Sarah’s New House
+                                p Personal / 21st March, 2014
+                        li.next-post
+                            button
+                                h3 Another Day In Paradise
+                                p Travel / 21st March, 2014 copy
+        section.wr-tweets(id="wr-tweets")
             div.container
-                ul(class="slider-container next-posts")
-                    li.next-post
-                        button
-                            h3 Another Day In Paradise
-                            p Travel / 21st March, 2014 copy
-                    li.next-post
-                        button
-                            h3 Jimmy’s New Book on Aliens
-                            p Personal / 21st March, 2014
-                    li.next-post
-                        button
-                            h3 Sarah’s New House
-                            p Personal / 21st March, 2014
-                    li.next-post
-                        button
-                            h3 Another Day In Paradise
-                            p Travel / 21st March, 2014 copy
-    section.wr-tweets(id="wr-tweets")
-        div.container
-            p
-                a.fa(href="#") &#xf099;
-            img(src="./images/4-featured-articles/photo2.jpg" alt="photo-icon")
-            p Happiness cannot be traveled to, owned, earned, or worn. It is the spiritual experience of living every minute with love, grace & gratitude.
-            p @loveless
+                p
+                    a.fa(href="#") &#xf099;
+                img(src="./images/4-featured-articles/photo2.jpg" alt="photo-icon")
+                p Happiness cannot be traveled to, owned, earned, or worn. It is the spiritual experience of living every minute with love, grace & gratitude.
+                p @loveless
     footer
         div.container
             div.wr-footer

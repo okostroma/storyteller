@@ -8,6 +8,7 @@ function getNewIndex(currentIndex){
         res = currentIndex+step;
     return res > 4 ? res-4 : res;
 }
+
 let partfolio_tabs = new Tabs.Create('.portfolio-sections li', (el, index)=>{
     document.querySelectorAll('.portfolio img').forEach(el=>{
 
@@ -18,7 +19,6 @@ let partfolio_tabs = new Tabs.Create('.portfolio-sections li', (el, index)=>{
         el.setAttribute("src", src.replace(/image\d/, "image"+newIndex));
     });
     el.classList.add('active');
-
 });
 
 //animation effects
