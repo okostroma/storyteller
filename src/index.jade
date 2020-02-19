@@ -3,8 +3,8 @@ mixin services-article(image, caption, text)
         img(src=image.url alt=image.alt)
         h2= caption
         p= text
-mixin featured-article(caption, content, image, name, date)
-    div.article
+mixin featured-article(caption, content, image, name, date, active)
+    div(class="article"+(active ? " active" : ""))
         h3=caption
         p=content
         div.author
@@ -85,28 +85,29 @@ body
                     +featured-article(
                         "comic",
                         "A million ways to die in the wild wild wild west",
-                        {url : "./images/4-featured-articles/photo1.jpg", alt : 'photo-icon'},
+                        {url : "./images/4-featured-articles/photo1.jpg", alt : "photo-icon"},
                         "jimmy jefferson",
-                        "21/08/2013"
+                        "21/08/2013",
+                        true
                     )
                     +featured-article(
                         "lifestyle",
                         "The most comfortable chair comes with no backpain",
-                        {url : "./images/4-featured-articles/photo2.jpg", alt : 'photo-icon'},
+                        {url : "./images/4-featured-articles/photo2.jpg", alt : "photo-icon"},
                         "Gail Gutierrez",
                         "21/08/2013"
                     )
                     +featured-article(
                         "travel",
                         "journey to the center of the earth with jefferson",
-                        {url: "./images/4-featured-articles/photo3.jpg", alt: 'photo-icon'},
+                        {url: "./images/4-featured-articles/photo3.jpg", alt: "photo-icon"},
                         "mason johnston",
                         "21/08/2013"
                     )
                     +featured-article(
                         "travel",
                         "journey to the center of the earth with jefferson",
-                        {url: "./images/4-featured-articles/photo3.jpg", alt: 'photo-icon'},
+                        {url: "./images/4-featured-articles/photo3.jpg", alt: "photo-icon"},
                         "mason johnston",
                         "21/08/2013"
                     )
@@ -125,13 +126,14 @@ body
                     img(src="./images/5-clients/client9.png" alt="client-icon")
                     img(src="./images/5-clients/client10.png" alt="client-icon")
                     img(src="./images/5-clients/client11.png" alt="client-icon")
+                    img(src="./images/5-clients/client4.png" alt="client-icon")
         section.wr-portfolio(id="wr-portfolio")
             div.container
-                h2(class="view-animate #pulse") Portfolio & Screenshots
+                h2 Portfolio & Screenshots
                 p The gentlemen who rented the room would sometimes take their evening meal at home in the living room that was used by everyone, and so the door to this room was often kept closed in the
                 div.devider
                 ul.portfolio-sections
-                    li.active
+                    li(class="active view-animate #swing")
                         button Art
                     li
                         button Mystery

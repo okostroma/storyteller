@@ -1,8 +1,11 @@
 $mainText: #212121;
 $devider: #e64a19;
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
 ul {
   list-style-type: none;
-
 }
 
 a {
@@ -22,9 +25,7 @@ button {
   outline: inherit;
 }
 
-body {
-  margin: 0;
-}
+
 
 .container {
   max-width: 1200px;
@@ -43,6 +44,29 @@ body {
 }
 .slider-container .slick-prev, .slick-prev:before{
   left: -3%;
+}
+.slick-next.slick-disabled:before
+{
+  display: none;
+}
+.slick-dots {
+  bottom: -66px;
+}
+.slick-dots li button {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #cccccc;
+}
+.slick-dots li button:before {
+  content: "";
+  display: block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+.slick-active button:before {
+  background-color: red;
 }
 h2{
   font-family: "SourceSansPro-Bold";

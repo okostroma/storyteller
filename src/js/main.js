@@ -8,7 +8,6 @@ function getNewIndex(currentIndex){
         res = currentIndex+step;
     return res > 4 ? res-4 : res;
 }
-
 let partfolio_tabs = new Tabs.Create('.portfolio-sections li', (el, index)=>{
     document.querySelectorAll('.portfolio img').forEach(el=>{
 
@@ -20,9 +19,12 @@ let partfolio_tabs = new Tabs.Create('.portfolio-sections li', (el, index)=>{
     });
     el.classList.add('active');
 });
+let featured_articles = new Tabs.Create('.article', el=>{
+    el.classList.add('active');
+});
 
 //animation effects
-const $articles = $(".wr-services article");
+const $articles = $('.wr-services article');
 let animated = false;
 function lightSpeedIn(elements) {
     elements.each(function (i) {
