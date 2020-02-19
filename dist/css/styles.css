@@ -1351,7 +1351,7 @@ section {
 .wr-header {
   height: 100vh;
   box-sizing: border-box;
-  padding-bottom: 204px;
+  padding-bottom: 181px;
   background-image: url(../images/1-header/background.jpg);
   background-repeat: no-repeat;
   background-size: cover; }

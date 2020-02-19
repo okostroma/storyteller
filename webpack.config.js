@@ -130,6 +130,7 @@ module.exports = {
             // chunkFilename: '[id].css',
         }),
         new HtmlWebpackPlugin({
+            favicon: './src/images/favicon.ico',
             filename: 'index.html',
             template: './src/index.jade',
             minify  : true,
