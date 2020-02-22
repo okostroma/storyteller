@@ -17,8 +17,8 @@
   height: 100vh;
   box-sizing: border-box;
   padding-bottom: 181px;
-  background-image: url("../images/1-header/background.jpg");
-  //background-image: url("../../originals/sea1.jpg");
+  background-image: url("../images/1-header/background.jpg") ;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -88,7 +88,6 @@ header {
 .header-content {
   max-height: 350px;
   height: 100%;
-
   max-width: 530px;
   width: 100%;
   display: flex;
@@ -488,7 +487,6 @@ header {
       grid-row-start: 2;
     }
   }
-
   .post-content {
     margin: auto;
     padding: 0 70px;
@@ -774,7 +772,6 @@ footer {
   }
 }
 
-//@media screen and (max-height: 660px) {
 @media screen and (max-height: 568px) {
   .wr-intro {
     height: 100vh;

@@ -1353,6 +1353,7 @@ section {
   box-sizing: border-box;
   padding-bottom: 181px;
   background-image: url(../images/1-header/background.jpg);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
   .wr-header .container {
